@@ -1,0 +1,42 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/blogs?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: a
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  # springboot默认开启文件上传
+  # 静态资源映射配置 F:/upload/ ====> http://127.0.0.1/upload
+  resources:
+    staticLocations: file:F:/images/
+    
+  mail:
+    #邮箱服务地址
+    host: smtp.qq.com
+    #用户名
+    username: yc488@qq.com
+    #发送邮件密码 
+    #IMTP ojklelpudxrcbeji
+    #SMTP nqooawpcflpybeei
+    password: nqooawpcflpybeei
+    default-encoding: UTF-8
+    
+#自定义属性以谁来发邮件
+mail:
+  fromMail:
+    addr: yc488@qq.com
+    
+logging:
+  level:
+    com:
+      yc:
+        blog:
+          dao: debug
+          web: warn
+       
+   
